@@ -1,27 +1,26 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+<div class="app">
+      <SigninForm/>
+      </div>
 </template>
+<script>
+import SigninForm from './components/SigninForm.vue'
+
+export default ({
+    name: 'App',
+    components: {SigninForm}
+})
+</script>
 
 <style>
-#app {
+
+.app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  background-color: #191531;
+  width: 100vw;
+  height: 100vh;
 }
 
 #nav a.router-link-exact-active {
