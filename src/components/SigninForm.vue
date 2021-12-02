@@ -4,7 +4,7 @@
             class="signin-form position-absolute top-50 start-10 translate-middle"
         >
             <h1>Sign in</h1>
-            
+
             <div class="mb-3">
                 <input
                     type="email"
@@ -32,6 +32,13 @@
                 </router-link>
                 <button type="submit" class="btn btn-primary">PROCEED</button>
             </div>
+            <div class="signup-div">
+                You don't have account?
+                <router-link to="/sign-up" tag="p" class="signup-link" exact>
+                    Sing Up
+                </router-link>
+            </div>
+            <router-view />
         </form>
     </div>
 </template>
@@ -48,38 +55,33 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .signin-page {
     height: 100vh;
     width: 40vw;
     background-color: white;
     float: left;
 }
+
+.signin-form {
+    display: inline-block;
+    vertical-align: middle;
+}
 h1 {
     float: left;
     color: #000000;
     margin-bottom: 5vh;
 }
-.signin-form {
-    display: inline-block;
-    grid-template-rows: auto auto auto auto;
-    grid-gap: 500px;
-    vertical-align: middle;
-}
 .mb-3 {
     width: 50vh;
 }
-input[placeholder],
-[placeholder],
-*[placeholder] {
-    color: red !important;
-}
+
 .link-and-btn {
+    position: relative;
+    top: 3vh;
     display: inline;
 }
-/* input[type="email"]:focus {
-    border: 3px solid #000000;
-} */
+
 .link {
     position: relative;
     color: #7b7988;
@@ -94,5 +96,50 @@ input[placeholder],
     border: none !important;
     width: 10vw;
     height: 7vh;
+}
+.signup-div {
+    margin-top: 13vh;
+}
+.signup-link {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1047px) {
+    .signin-page {
+        width: 50vw;
+    }
+    .signin-form {
+        width: 40vw;
+    }
+    .mb-3 {
+        width: 40vw;
+    }
+    .link {
+        float: left;
+        left: 1vw;
+        top: 0.5vh;
+    }
+    .btn-primary {
+        width: inherit;
+        height: inherit;
+    }
+}
+@media screen and (max-width: 600px) {
+    .signin-page {
+        width: 100vw;
+    }
+    .signin-form {
+        width: 90vw;
+    }
+    .mb-3 {
+        width: 90vw;
+    }
+    .link {
+        float: left;
+        left: 1vw;
+    }
+    .btn-primary {
+        width: inherit;
+    }
 }
 </style>

@@ -1,14 +1,16 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-  </div>
+    <div class="home">
+        
+        <SigninForm />
+       
+    </div>
 </template>
-
 <script>
-// @ is an alias to /src
+import SigninForm from "../components/SigninForm.vue";
 
 export default {
-  name: "Home",
- 
+    name: "Home",
+    components: { SigninForm },
 };
 </script>
+
