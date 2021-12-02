@@ -134,14 +134,18 @@ h1 {
         width: 50vw;
     }
     .signup-form {
-        width: 40vw;
+        width: 50vw;
     }
     .mb-3 {
         width: 40vw;
     }
     .btn-primary {
-        width: inherit;
+        width: 20vw;
         height: inherit;
+        margin-left: -10vw;
+    }
+    .back-arrow {
+    left: -15vw; 
     }
 }
 
@@ -153,10 +157,14 @@ h1 {
         width: 90vw;
     }
     .mb-3 {
-        width: 90vw;
+        width: 70vw;
     }
     .btn-primary {
-        width: inherit;
+        width: 30vw;
+        margin-left: -20vw;
+    }
+    .back-arrow {
+    left: -30vw; 
     }
 }
 </style>
